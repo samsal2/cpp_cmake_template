@@ -23,7 +23,7 @@ add_subdirectory(src)
 # compile options
 target_compile_options(${PROJECT_NAME} PUBLIC
 	"$<$<COMPILE_LANG_AND_ID:CXX,Clang,AppleClang>:"
-    -std=c++20
+		-std=c++20
 		-Wall
 		-Wshadow
 		-Wextra
@@ -32,7 +32,7 @@ target_compile_options(${PROJECT_NAME} PUBLIC
 		-pedantic-errors
 		-Walloca 
 		-Wvla 
-    -fdiagnostics-color=always
+		-fdiagnostics-color=always
   ">"
 	"$<$<AND:$<COMPILE_LANG_AND_ID:CXX,Clang,AppleClang>,$<CONFIG:Debug>>:"
 		-O0
